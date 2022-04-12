@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         Grade = findViewById(R.id.grade);
         Credit = findViewById(R.id.credit);
 
+        gpa = findViewById(R.id.GPA);
         addCourse = findViewById(R.id.adding);
         getGPA = findViewById(R.id.button);
 
@@ -100,8 +101,10 @@ public class MainActivity extends AppCompatActivity {
         getCGPA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Credit.getText().length() == 0 || Grade.getText().length() == 0  )
+                if(gpa.getText().length() == 0  ) {
                     warningCGPA.show();
+                    return;
+                }
                else if( current_cgpa.getText().length() == 0 )
                    Cgpa.setText(gpa.getText());
                else{
@@ -125,19 +128,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 double GPA = 0.0;
                 double noOfHours = 0.0;
-                if(Credit.getText().length() == 0 || Grade.getText().length() == 0  ){
+                if(creditGroup.size() == 0 || gradeGroup.size() == 0  ){
                     warning.show();return;
                 }
 
                 for (int i = 0; i < creditGroup.size(); i++) {
                     if (getValueOfGrade(gradeGroup.get(i)) == -1)//if the input is out of range of the grade
                         warningGrade.show();
-                    else
+                    else{
                         GPA += creditGroup.get(i) * getValueOfGrade(gradeGroup.get(i));
                         noOfHours += creditGroup.get(i);
+                    }
+
                 }
                 noOfHoursSGPA = noOfHours;
-                gpa = findViewById(R.id.GPA);
                 gpa.setText((GPA / noOfHours) +"");
                 creditGroup.clear();
                 gradeGroup.clear();
