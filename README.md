@@ -3,7 +3,7 @@
  
  ## How to compute SGPA ?
  
-  (course grade * course credit) / ( total credits )
+  ( course grade * course credit ) / ( total credits )
   
    ## How to compute CGPA ? 
    
