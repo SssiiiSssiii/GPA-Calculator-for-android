@@ -12,4 +12,23 @@
    ## why is said for faculty of science ain shams university ?
    
    faculty of science ain shams university has different grade table 
- 
+   
+                             | Grade | Points |
+                             |-------|--------|
+                             | A     | 4      |
+                             | A-    | 3.67   |
+                             | B+    | 3.33   |
+                             | B     | 3      |
+                             | C+    | 2.67   |
+                             | C     | 2.33   |
+                             | D     | 2      |
+                             | F     | 0      |
+
+
+
+
+
+
+
+
+
