@@ -11,7 +11,7 @@
    
    ## Why i said for faculty of science ain shams university ?
    
-   faculty of science ain shams university has different grade table 
+   faculty of science ain shams university a has different grade table 
    
                              | Grade | Points |
                              |-------|--------|
