@@ -105,8 +105,6 @@ public class MainActivity extends AppCompatActivity {
                     warningCGPA.show();
                     return;
                 }
-               else if( current_cgpa.getText().length() == 0 )
-                   Cgpa.setText(gpa.getText());
                else{
                    try {
                       double SGPA =  Double.parseDouble(gpa.getText().toString());
@@ -131,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
                 if(creditGroup.size() == 0 || gradeGroup.size() == 0  ){
                     warning.show();return;
                 }
-
                 for (int i = 0; i < creditGroup.size(); i++) {
                     if (getValueOfGrade(gradeGroup.get(i)) == -1)//if the input is out of range of the grade
                         warningGrade.show();
@@ -143,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 noOfHoursSGPA = noOfHours;
                 gpa.setText((GPA / noOfHours) +"");
+                Cgpa.setText(gpa.getText());
                 creditGroup.clear();
                 gradeGroup.clear();
 
